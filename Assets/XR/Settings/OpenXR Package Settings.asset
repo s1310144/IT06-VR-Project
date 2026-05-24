@@ -20,6 +20,7 @@ MonoBehaviour:
   company: Unity
   priority: 0
   required: 0
+<<<<<<< Updated upstream
 --- !u!114 &-8253106773458723902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42,6 +43,8 @@ MonoBehaviour:
   required: 0
   cacheSize: 1048576
   perThreadCacheSize: 51200
+=======
+>>>>>>> Stashed changes
 --- !u!114 &-8176857739757209396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62,6 +65,7 @@ MonoBehaviour:
   company: Unity
   priority: 0
   required: 0
+<<<<<<< Updated upstream
 --- !u!114 &-7481670783980424466
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82,6 +86,8 @@ MonoBehaviour:
   company: Unity
   priority: 0
   required: 0
+=======
+>>>>>>> Stashed changes
 --- !u!114 &-6939093753912626550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,6 +188,7 @@ MonoBehaviour:
   company: Unity
   priority: 0
   required: 0
+<<<<<<< Updated upstream
 --- !u!114 &-6289112937682300524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202,6 +209,8 @@ MonoBehaviour:
   company: Unity
   priority: 0
   required: 0
+=======
+>>>>>>> Stashed changes
 --- !u!114 &-6200941531171500153
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,6 +231,7 @@ MonoBehaviour:
   company: Unity
   priority: 0
   required: 0
+<<<<<<< Updated upstream
 --- !u!114 &-5108290463953367187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -244,6 +254,8 @@ MonoBehaviour:
   m_spacewarpMotionVectorTextureFormat: 0
   m_optimizeBufferDiscards: 0
   m_symmetricProjection: 0
+=======
+>>>>>>> Stashed changes
 --- !u!114 &-4165778992871699488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -324,6 +336,7 @@ MonoBehaviour:
   company: Unity
   priority: 0
   required: 0
+<<<<<<< Updated upstream
 --- !u!114 &-2844769358359225888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -344,6 +357,8 @@ MonoBehaviour:
   company: Unity
   priority: 0
   required: 0
+=======
+>>>>>>> Stashed changes
 --- !u!114 &-2766142980631764770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -377,6 +392,7 @@ MonoBehaviour:
   extensionStrings:
   - XR_KHR_binding_modification
   - XR_EXT_dpad_binding
+<<<<<<< Updated upstream
 --- !u!114 &-2747180534802094013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -397,6 +413,8 @@ MonoBehaviour:
   company: Unity
   priority: 0
   required: 0
+=======
+>>>>>>> Stashed changes
 --- !u!114 &-2632430327127928119
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -534,6 +552,7 @@ MonoBehaviour:
   m_spacewarpMotionVectorTextureFormat: 0
   m_optimizeBufferDiscards: 1
   m_symmetricProjection: 0
+<<<<<<< Updated upstream
 --- !u!114 &-160961225905178790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -554,6 +573,8 @@ MonoBehaviour:
   company: Unity
   priority: 0
   required: 0
+=======
+>>>>>>> Stashed changes
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -566,11 +587,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f0ebc320a151d3408ea1e9fce54d40e, type: 3}
   m_Name: OpenXR Package Settings
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
   Keys: 01000000070000000d0000000e00000004000000
+=======
+  Keys: 01000000070000000d000000
+>>>>>>> Stashed changes
   Values:
   - {fileID: 3085984625560294679}
   - {fileID: -483811204341247457}
   - {fileID: 7422841010567542521}
+<<<<<<< Updated upstream
   - {fileID: 5790788572825694357}
   - {fileID: -5108290463953367187}
 --- !u!114 &264133995239973178
@@ -613,6 +639,8 @@ MonoBehaviour:
   company: Unity
   priority: 0
   required: 0
+=======
+>>>>>>> Stashed changes
 --- !u!114 &522914651603900794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -768,6 +796,7 @@ MonoBehaviour:
   m_spacewarpMotionVectorTextureFormat: 0
   m_optimizeBufferDiscards: 0
   m_symmetricProjection: 0
+<<<<<<< Updated upstream
 --- !u!114 &3130189425170734242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -841,6 +870,8 @@ MonoBehaviour:
   company: Unity
   priority: 0
   required: 0
+=======
+>>>>>>> Stashed changes
 --- !u!114 &3526491476836593907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -921,6 +952,7 @@ MonoBehaviour:
   company: Unity
   priority: 0
   required: 0
+<<<<<<< Updated upstream
 --- !u!114 &4123488171215085108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -981,6 +1013,8 @@ MonoBehaviour:
   company: Unity
   priority: 0
   required: 0
+=======
+>>>>>>> Stashed changes
 --- !u!114 &4861408257537929191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1043,6 +1077,7 @@ MonoBehaviour:
   company: Unity
   priority: 0
   required: 0
+<<<<<<< Updated upstream
 --- !u!114 &5427386101334354339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1063,6 +1098,8 @@ MonoBehaviour:
   company: Unity
   priority: 0
   required: 0
+=======
+>>>>>>> Stashed changes
 --- !u!114 &5637486366552633189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1085,6 +1122,7 @@ MonoBehaviour:
   required: 0
   cacheSize: 1048576
   perThreadCacheSize: 51200
+<<<<<<< Updated upstream
 --- !u!114 &5790788572825694357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1123,6 +1161,8 @@ MonoBehaviour:
   m_spacewarpMotionVectorTextureFormat: 0
   m_optimizeBufferDiscards: 0
   m_symmetricProjection: 0
+=======
+>>>>>>> Stashed changes
 --- !u!114 &5809698418277405757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1168,6 +1208,7 @@ MonoBehaviour:
   lateLatchingDebug: 0
   optimizeMultiviewRenderRegions: 0
   spacewarpMotionVectorTextureFormat: 0
+<<<<<<< Updated upstream
 --- !u!114 &6432481264848960211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1208,6 +1249,8 @@ MonoBehaviour:
   company: Unity
   priority: 0
   required: 0
+=======
+>>>>>>> Stashed changes
 --- !u!114 &6848033462404003230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1251,6 +1294,7 @@ MonoBehaviour:
   m_spacewarpMotionVectorTextureFormat: 0
   m_optimizeBufferDiscards: 0
   m_symmetricProjection: 0
+<<<<<<< Updated upstream
 --- !u!114 &7806750625293299338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1271,6 +1315,8 @@ MonoBehaviour:
   company: Unity
   priority: 0
   required: 0
+=======
+>>>>>>> Stashed changes
 --- !u!114 &8044786743856364942
 MonoBehaviour:
   m_ObjectHideFlags: 0
