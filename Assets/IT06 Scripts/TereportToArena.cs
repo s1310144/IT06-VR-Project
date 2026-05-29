@@ -4,13 +4,10 @@ using UnityEngine;
 
 public class TeleportToArena : MonoBehaviour
 {
-    [Header("Player")]
     [SerializeField] private Transform xrOrigin;
 
-    [Header("Main Camera")]
     [SerializeField] private Transform mainCamera;
 
-    [Header("Teleport destination")]
     [SerializeField] private Transform TeleportPoint;
 
     // Startƒ{ƒ^ƒ“‚©‚çŒÄ‚Ño‚·ŠÖ”
