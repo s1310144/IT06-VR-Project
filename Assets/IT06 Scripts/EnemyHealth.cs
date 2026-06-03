@@ -16,8 +16,12 @@ public class EnemyHealth : MonoBehaviour
     {
         currentHP = maxHP;
 
-        _renderer = GetComponent<Renderer>();
-        _color = _renderer.material.color;
+        _renderer = GetComponentInChildren<Renderer>();
+
+        if (_renderer != null)
+        {
+            _color = _renderer.material.color;
+        }
     }
 
     // Update is called once per frame
@@ -47,6 +51,11 @@ public class EnemyHealth : MonoBehaviour
 
     IEnumerator DamageFlash()
     {
+        if (_renderer == null)
+        {
+            yield break;
+        }
+
         _renderer.material.color = Color.red;
 
         yield return new WaitForSeconds(0.2f);
