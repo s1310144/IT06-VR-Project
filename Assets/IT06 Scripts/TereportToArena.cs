@@ -40,5 +40,6 @@ public class TeleportToArena : MonoBehaviour
 
         // XR Origin‚ðYŽ²•ûŒü‚É‰ñ“]‚³‚¹‚é
         xrOrigin.Rotate(0f, angle, 0f, Space.World);
+
     }
 }

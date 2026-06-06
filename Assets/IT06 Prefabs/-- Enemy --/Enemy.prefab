@@ -939,10 +939,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7c7faec7204470041812d12c41484fa0,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8218010669970989761}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7c7faec7204470041812d12c41484fa0,
-        type: 3}
-      insertIndex: -1
       addedObject: {fileID: 859888335940872795}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7c7faec7204470041812d12c41484fa0,
         type: 3}
@@ -1173,27 +1169,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitSound: {fileID: 8300000, guid: 651422927c2f05543ae8df9b7e8f89a5, type: 3}
---- !u!114 &8218010669970989761
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1944755975734969343}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 855c7e05fef4f3a45b556d5a89356465, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  moveSpeed: 2
-  cooldown: 2
-  stopRange: 2.5
-  searchRange: 10
-  floatBaseY: 0.3
-  floatHeight: 0.1
-  floatSwaySpeed: 5
-  _enemySound: {fileID: 6916355509140851861}
 --- !u!114 &859888335940872795
 MonoBehaviour:
   m_ObjectHideFlags: 0

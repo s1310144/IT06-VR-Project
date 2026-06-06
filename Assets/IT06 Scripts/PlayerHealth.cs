@@ -16,7 +16,8 @@ public class PlayerHealth : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip damageClip;
 
-    public Behaviour restartManager;
+    public GameObject gameOverBoard;
+    public GameObject enemy;
 
     private Vignette vignette;
     private ChromaticAberration chromatic;
@@ -41,9 +42,9 @@ public class PlayerHealth : MonoBehaviour
 
         defaultColor = vignette.color.value;
 
-        if (restartManager != null)
+        if (gameOverBoard != null)
         {
-            restartManager.enabled = false;
+            gameOverBoard.SetActive(false);
         }
     }
 
@@ -55,7 +56,7 @@ public class PlayerHealth : MonoBehaviour
         if ((float)currentHP / maxHP <= redHpRatio)
         {
             vignette.color.value = Color.red;
-            vignette.intensity.value = 0.4f;
+            vignette.intensity.value = 0.6f;
             vignette.smoothness.value = 0.3f;
             vignette.active = true;
         }
@@ -94,7 +95,7 @@ public class PlayerHealth : MonoBehaviour
         isFlash = true;
 
         vignette.color.value = Color.red;
-        vignette.intensity.value = 0.7f;
+        vignette.intensity.value = 0.8f;
         vignette.smoothness.value = 0.3f;
         vignette.active = true;
 
@@ -128,9 +129,10 @@ public class PlayerHealth : MonoBehaviour
     // Ž€–S
     void Die()
     {
-        if (restartManager != null)
+        if (gameOverBoard != null)
         {
-            restartManager.enabled = true;
+            enemy.SetActive(false);
+            gameOverBoard.SetActive(true);
         }
     }
 

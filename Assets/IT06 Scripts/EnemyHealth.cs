@@ -32,7 +32,7 @@ public class EnemyHealth : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip damageClip;
 
-    public Behaviour restartManager;
+    public GameObject clearBoard;
     public bool useRestartManager = true;
 
 
@@ -57,9 +57,9 @@ public class EnemyHealth : MonoBehaviour
         _interactable = GetComponent<XRGrabInteractable>();
         _interactable.enabled = false;
 
-        if (restartManager != null)
+        if (clearBoard != null)
         {
-            restartManager.enabled = false;
+            clearBoard.SetActive(false);
         }
     }
 
@@ -189,10 +189,10 @@ public class EnemyHealth : MonoBehaviour
         _interactable.enabled = true;
 
 
-        if (restartManager != null && useRestartManager == true)
+        if (clearBoard != null && useRestartManager == true)
         {
                 yield return new WaitForSeconds(2.0f);
-                restartManager.enabled = true;
+                clearBoard.SetActive(true);
         }
      
     }

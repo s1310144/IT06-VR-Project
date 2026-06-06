@@ -21,6 +21,8 @@ public class EnemyMove : MonoBehaviour
 
     public float maxSlopeAngle = 45f;
 
+    private bool playerInStage = false;
+
     public EnemySound _enemySound;
 
     // デバッグ用
@@ -74,7 +76,7 @@ public class EnemyMove : MonoBehaviour
         if (_enemyHealth.isDead) return;
         SearchPlayer();
 
-        if (!isRoar)
+        if (!isRoar && playerInStage)
         {
             if (foundPlayer)
             {
@@ -216,6 +218,7 @@ public class EnemyMove : MonoBehaviour
         {
             attack = Random.Range(0, 3);
         }
+        previousAttack = attack;
 
         switch (attack)
         {
@@ -301,4 +304,6 @@ public class EnemyMove : MonoBehaviour
             return false;
         }
     }
+
+    public void PlayerInStage() { playerInStage = true; }
 }
