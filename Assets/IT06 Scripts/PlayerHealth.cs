@@ -56,8 +56,8 @@ public class PlayerHealth : MonoBehaviour
         if ((float)currentHP / maxHP <= redHpRatio)
         {
             vignette.color.value = Color.red;
-            vignette.intensity.value = 0.6f;
-            vignette.smoothness.value = 0.3f;
+            vignette.intensity.value = 0.8f;
+            vignette.smoothness.value = 0.8f;
             vignette.active = true;
         }
         else
@@ -95,7 +95,7 @@ public class PlayerHealth : MonoBehaviour
         isFlash = true;
 
         vignette.color.value = Color.red;
-        vignette.intensity.value = 0.8f;
+        vignette.intensity.value = 0.9f;
         vignette.smoothness.value = 0.3f;
         vignette.active = true;
 
