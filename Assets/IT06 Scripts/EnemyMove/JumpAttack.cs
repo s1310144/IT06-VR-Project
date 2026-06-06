@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class JumpAttack : MonoBehaviour
 {
-    public float waitTime = 1.5f;
-    public float jumpTime = 1.5f;
+    public float jumpWaitTime = 1.5f;
+    public float jumpingTime = 1.5f;
     public GameObject jumpAreaPrefab;
+
+    public float jumpEndWaitTime = 1.0f;
 
     public float damageRange = 4f;
     public int damage = 20;
@@ -32,15 +34,15 @@ public class JumpAttack : MonoBehaviour
         warning.transform.localScale = new Vector3(damageRange * 2, 1, damageRange * 2);
 
         // 予備動作
-        yield return new WaitForSeconds(waitTime);
+        yield return new WaitForSeconds(jumpWaitTime);
 
         float timer = 0f;
 
-        while (timer < jumpTime)
+        while (timer < jumpingTime)
         {
             timer += Time.deltaTime;
 
-            float t = timer / jumpTime;
+            float t = timer / jumpingTime;
 
             Vector3 pos = Vector3.Lerp(startPos, targetPos, t);
 
@@ -54,10 +56,9 @@ public class JumpAttack : MonoBehaviour
         sound.PlayJump();
 
         // 着地ダメージ
-        Collider[] hits =
-            Physics.OverlapSphere(targetPos, damageRange);
+        Collider[] hitColliders = Physics.OverlapSphere(targetPos, damageRange);
 
-        foreach (Collider hit in hits)
+        foreach (Collider hit in hitColliders)
         {
             if (hit.CompareTag("Player"))
             {
@@ -71,5 +72,8 @@ public class JumpAttack : MonoBehaviour
         }
 
         Destroy(warning);
+
+        // 攻撃後の待機時間
+        yield return new WaitForSeconds(jumpEndWaitTime);
     }
 }

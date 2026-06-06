@@ -9,11 +9,15 @@ public class SpinAttack : MonoBehaviour
     public float spinTime = 2f;
 
     public float windupAngle = 60f;
-
     public float windupTime = 0.5f;
+
+    public float spinWaitShakeRatio = 0.5f;
+
+    public float spinEndWaitTime = 1.0f;
 
     public Collider spinAttackCollider;
     public Collider spiningEnemyCollider;
+    public Collider hitCollider;
 
     private Collider _collider;
     private bool isSpin;
@@ -37,25 +41,42 @@ public class SpinAttack : MonoBehaviour
     {
         Quaternion startRot = transform.rotation;
 
-        // ‹t•ûŒü‚Ö‚Ğ‚Ë‚é
-        Quaternion windupRot = startRot * Quaternion.Euler(0, -Mathf.Sign(spinSpeed) * windupAngle, 0);
+        // ‹t•ûŒü‚Ö‚Ğ‚Ë‚é‚½‚ß‚ÌŠp“x‚ğ‹‚ß‚é
+        Quaternion windupRot = startRot * Quaternion.Euler(0, -windupAngle, 0);
 
         float timer = 0f;
 
-        // —\”õ“®ì
+        // ŠÔ‚©‚¯‚Ä‚Ğ‚Ë‚é
         while (timer < windupTime)
         {
             timer += Time.deltaTime;
 
-            transform.rotation =Quaternion.Slerp(startRot, windupRot, timer / windupTime);
+            transform.rotation = Quaternion.Slerp(startRot, windupRot, timer / windupTime);
 
             yield return null;
         }
 
 
-        // —\”õ“®ì
-        yield return new WaitForSeconds(waitTime);
+        // ‚Ğ‚Ë‚Á‚½‚ rt‚Ì‘Ò‹@ŠÔ
+        //yield return new WaitForSeconds(waitTime);
 
+        timer = 0f;
+
+        // ‚Ğ‚Ë‚Á‚½Œã‚Éƒvƒ‹ƒvƒ‹k‚¦‚é‚æ‚¤‚É‚·‚éB
+        while (timer < waitTime)
+        {
+            timer += Time.deltaTime;
+
+            // ƒvrƒvƒ‹k‚¦‚é‚æ‚¤Šp“xŒvZ
+            float shakeAngle = Mathf.Sin(timer * 40f) * spinWaitShakeRatio;
+
+            transform.rotation =@windupRot * Quaternion.Euler(0, shakeAngle, 0);
+
+            yield return null;
+        }
+
+
+        // ƒXƒsƒ“ŠJn
         timer = 0f;
         isSpin = true;
 
@@ -64,6 +85,7 @@ public class SpinAttack : MonoBehaviour
         _collider.enabled = false;
         spinAttackCollider.enabled = true;
         spiningEnemyCollider.enabled = true;
+        hitCollider.enabled = false;
 
         while (timer < spinTime)
         {
@@ -74,13 +96,15 @@ public class SpinAttack : MonoBehaviour
             yield return null;
         }
 
-        yield return new WaitForSeconds(0.1f);
-
         isSpin = false;
 
         _collider.enabled = true;
         spinAttackCollider.enabled = false;
         spiningEnemyCollider.enabled = false;
+        hitCollider.enabled = true;
+
+        // UŒ‚Œã‚Ì‘Ò‹@ŠÔ
+        yield return new WaitForSeconds(spinEndWaitTime);
     }
 
     private void OnTriggerEnter(Collider other)

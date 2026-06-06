@@ -1,15 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Roar : MonoBehaviour
 {
     public float lookPlayerTime = 1f;
-
-    public float roarUpTime = 0.5f;
-
-    public float roarWaitTime = 1f;
+    public float FaceUpWaitTime = 0.5f;
+    public float roarFaceUpTime = 0.75f;
+    public float roarTime = 1f;
+    public float roarFaceDownTime = 0.25f;
+    public float roarEndWaitTime = 1.0f;
 
     public float roarAngle = -30f;
 
@@ -29,19 +29,11 @@ public class Roar : MonoBehaviour
 
     public IEnumerator RoarStart(Transform player, EnemySound sound)
     {
-        yield return new WaitForSeconds(0.2f);
-
-        // プレイヤー方向
-        Vector3 dir =
-            (player.position - transform.position).normalized;
-
+        // プレイヤー方向などを計算
+        Vector3 dir = (player.position - transform.position).normalized;
         dir.y = 0;
-
-        Quaternion startRot =
-            transform.rotation;
-
-        Quaternion lookRot =
-            Quaternion.LookRotation(dir);
+        Quaternion startRot = transform.rotation;
+        Quaternion lookRot = Quaternion.LookRotation(dir);
 
         float timer = 0f;
 
@@ -50,24 +42,18 @@ public class Roar : MonoBehaviour
         {
             timer += Time.deltaTime;
 
-            transform.rotation =
-                Quaternion.Slerp(
-                    startRot,
-                    lookRot,
-                    timer / lookPlayerTime
-                );
+            transform.rotation = Quaternion.Slerp(startRot, lookRot, timer / lookPlayerTime);
 
             yield return null;
         }
 
+        yield return new WaitForSeconds(FaceUpWaitTime);
+
+
         transform.rotation = lookRot;
 
         // 上向き
-        Quaternion roarRot =
-            lookRot *
-            Quaternion.Euler(roarAngle, 0, 0);
-
-        yield return new WaitForSeconds(0.5f);
+        Quaternion roarRot = lookRot * Quaternion.Euler(roarAngle, 0, 0);
 
 
         timer = 0f;
@@ -75,42 +61,32 @@ public class Roar : MonoBehaviour
         sound.PlayRoar();
 
         // 顔を上げる
-        while (timer < roarUpTime)
+        while (timer < roarFaceDownTime)
         {
             timer += Time.deltaTime;
 
-            transform.rotation =
-                Quaternion.Slerp(
-                    lookRot,
-                    roarRot,
-                    timer / roarUpTime
-                );
+            transform.rotation =Quaternion.Slerp(lookRot, roarRot, timer / roarFaceDownTime);
 
             yield return null;
         }
 
         // 咆哮
-        yield return new WaitForSeconds(roarWaitTime);
+        yield return new WaitForSeconds(roarTime);
 
         timer = 0f;
 
         // 戻す
-        while (timer < roarUpTime)
+        while (timer < roarFaceUpTime)
         {
             timer += Time.deltaTime;
 
-            transform.rotation =
-                Quaternion.Slerp(
-                    roarRot,
-                    lookRot,
-                    timer / roarUpTime
-                );
+            transform.rotation = Quaternion.Slerp( roarRot, lookRot, timer / roarFaceUpTime);
 
             yield return null;
         }
 
         transform.rotation = lookRot;
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(roarEndWaitTime);
     }
 }

@@ -30,8 +30,13 @@ public class BeamBullet : MonoBehaviour
             {
                 hp.TakeDamage(damage);
             }
+
+            Destroy(gameObject);
         }
 
-        Destroy(gameObject);
+        if (other.CompareTag("Terrain") || other.CompareTag("Weapon")) 
+        {
+            Destroy(gameObject);
+        }
     }
 }

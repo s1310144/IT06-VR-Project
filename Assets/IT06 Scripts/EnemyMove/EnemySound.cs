@@ -7,11 +7,8 @@ public class EnemySound : MonoBehaviour
     public AudioSource audioSource;
 
     public AudioClip roarClip;
-
     public AudioClip spinClip;
-
     public AudioClip jumpClip;
-
     public AudioClip beamClip;
 
     public void PlayRoar()
