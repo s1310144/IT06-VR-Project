@@ -4,6 +4,8 @@ public class EnemyHitDetector : MonoBehaviour
 {
     private EnemyHealth enemyHealth;
 
+    public AudioClip hitSound;
+
     private void Start()
     {
         enemyHealth = GetComponent<EnemyHealth>();
@@ -23,6 +25,12 @@ public class EnemyHitDetector : MonoBehaviour
         if (weaponDamage != null)
         {
             enemyHealth.TakeDamage(weaponDamage.damage);
+
+            if (hitSound != null)
+            {
+                AudioSource.PlayClipAtPoint(hitSound, transform.position);
+            }
+
             Debug.Log("Enemy damaged by " + other.gameObject.name);
         }
     }
