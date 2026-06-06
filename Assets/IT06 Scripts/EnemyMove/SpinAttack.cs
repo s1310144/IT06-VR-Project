@@ -8,6 +8,8 @@ public class SpinAttack : MonoBehaviour
     public float spinSpeed = 720f;
     public float spinTime = 2f;
 
+    public int damage = 15; 
+
     public float windupAngle = 60f;
     public float windupTime = 0.5f;
 
@@ -115,7 +117,7 @@ public class SpinAttack : MonoBehaviour
 
             if (hp != null)
             {
-                hp.TakeDamage(10);
+                hp.TakeDamage(damage);
             }
         }
     }

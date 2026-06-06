@@ -186,12 +186,12 @@ public class EnemyHealth : MonoBehaviour
         lowHpEffects.SetActive(false);
 
 
-        _interactable.enabled = true;
+        //_interactable.enabled = true;
 
 
         if (clearBoard != null && useRestartManager == true)
         {
-                yield return new WaitForSeconds(2.0f);
+                yield return new WaitForSeconds(5.0f);
                 clearBoard.SetActive(true);
         }
      

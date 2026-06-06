@@ -14,7 +14,7 @@ public class BeamAttack : MonoBehaviour
     public float beamEndWaitTime = 1.0f;
     //public float conAttacksWaitTime = 0.1f;
     public int consecutiveAttacksNumber = 2;
-    public float consecutiveAttacksTimeRatio = 0.25f;
+    public float consecutiveAttacksTimeRatio = 0.1f;
 
 
     public float laserWidth = 0.02f;
