@@ -20,19 +20,19 @@ RenderSettings:
   m_FogDensity: 0.02
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.3018868, g: 0.3018868, b: 0.3018868, a: 1}
+  m_AmbientSkyColor: {r: 0.40874562, g: 0.40874562, b: 0.52201253, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 0.6
   m_AmbientMode: 3
-  m_SubtractiveShadowColor: {r: 0.17060237, g: 0.1850611, b: 0.23899364, a: 1}
+  m_SubtractiveShadowColor: {r: 0, g: 0.008879025, b: 0.050314426, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: 20cbde986f628bb41bbc92dfd61311cf, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
   m_HaloTexture: {fileID: 0}
   m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
-  m_DefaultReflectionMode: 0
+  m_DefaultReflectionMode: 1
   m_DefaultReflectionResolution: 128
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
@@ -3120,25 +3120,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 073e7ea765d129c41a8b19dfb3ca2d71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1063328773
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1063328734}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99c4a7b92ce700d4e80cc12e1b511b2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lookPlayerTime: 1
-  FaceUpWaitTime: 0.5
-  roarFaceUpTime: 0.75
-  roarTime: 1
-  roarFaceDownTime: 0.25
-  roarEndWaitTime: 1
-  roarAngle: -30
 --- !u!1 &1088689751
 GameObject:
   m_ObjectHideFlags: 0
@@ -5905,11 +5886,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1944755975734969343, guid: b5d9548943bc1b543b3664e8c1c24607,
-        type: 3}
-      insertIndex: 10
-      addedObject: {fileID: 1063328773}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5d9548943bc1b543b3664e8c1c24607, type: 3}
 --- !u!1 &2002808828
 GameObject:

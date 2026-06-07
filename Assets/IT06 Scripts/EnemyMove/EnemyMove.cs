@@ -98,10 +98,14 @@ public class EnemyMove : MonoBehaviour
     {
         if (foundPlayer) return;
 
+        Debug.Log(this.gameObject.name + " searching Player / " + this.gameObject.name + " がプレイヤーを探しています");
+
         float distance = Vector3.Distance(transform.position, player.position);
 
         if (distance <= searchRange)
         {
+            Debug.Log(this.gameObject.name + " Found Player / " + this.gameObject.name + " プレイヤー発見");
+
             foundPlayer = true;
             StartCoroutine(Roar());
         }
@@ -125,6 +129,8 @@ public class EnemyMove : MonoBehaviour
     void AttackMove()
     {
         if (isAttack) return;
+
+        Debug.Log(this.gameObject.name + " Attack Moving / " + this.gameObject.name + " が攻撃のための移動をしています");
 
         cooldownTimer -= Time.deltaTime;
 
@@ -158,6 +164,8 @@ public class EnemyMove : MonoBehaviour
     void RandomMove()
     {
         if (isAttack) return;
+
+        Debug.Log(this.gameObject.name + " Random Moving / " + this.gameObject.name + " がランダム移動中");
 
         randomMoveTimer -= Time.deltaTime;
         Vector3 dir;
@@ -282,26 +290,37 @@ public class EnemyMove : MonoBehaviour
     // デバッグ用変数が一つでもtrueの時falseを返す
     bool DebugAttack() 
     {
-        Debug.Log("Attack");
         if (onlySpin)
         {
+            Debug.Log(this.gameObject.name + " Spin Attack Debug Mode On");
+            // Debug.Log(this.gameObject.name + " の回転攻撃のデバッグモードをオン");
+
             StartCoroutine(Spin());
             cooldownTimer = cooldown;
             return true;
         }
         else if (onlyJump)
         {
+            Debug.Log(this.gameObject.name + " Jump Attack Debug Mode On");
+            // Debug.Log(this.gameObject.name + " のジャンプ攻撃のデバッグモードをオン");
+
             StartCoroutine(Jump());
             cooldownTimer = cooldown;
             return true;
         }
         else if (onlyBeam)
         {
+            Debug.Log(this.gameObject.name + " Beam Attack Debug Mode On");
+            // Debug.Log(this.gameObject.name + " のビーム攻撃のデバッグモードをオン");
+
             StartCoroutine(Beam());
             cooldownTimer = cooldown;
             return true;
         }
         else {
+            Debug.Log(this.gameObject.name + " Attack Debug Mode Off");
+            // Debug.Log(this.gameObject.name + " の攻撃のデバッグモードをオフ");
+
             cooldownTimer = cooldown;
             return false;
         }

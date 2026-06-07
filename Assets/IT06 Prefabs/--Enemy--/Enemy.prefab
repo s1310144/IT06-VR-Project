@@ -955,6 +955,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7c7faec7204470041812d12c41484fa0,
         type: 3}
       insertIndex: -1
+      addedObject: {fileID: 5215796071169434835}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7c7faec7204470041812d12c41484fa0,
+        type: 3}
+      insertIndex: -1
       addedObject: {fileID: 6916355509140851861}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7c7faec7204470041812d12c41484fa0,
         type: 3}
@@ -1273,9 +1277,27 @@ MonoBehaviour:
   laserWidth: 0.05
   laserRange: 20
   laserLimitAngle: 80
-  laserAimingHeightY: 0
   damage: 5
   bulletSpeed: 15
+--- !u!114 &5215796071169434835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1944755975734969343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 978047cb94748ea4c929cebb87d39ad3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lookPlayerTime: 1
+  FaceUpWaitTime: 0.5
+  roarFaceUpTime: 0.5
+  roarTime: 1
+  roarFaceDownTime: 0.25
+  roarEndWaitTime: 1
+  roarAngle: -30
 --- !u!114 &6916355509140851861
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -56,5 +56,7 @@ public class WeaponEnchant : MonoBehaviour
         {
             fireEffect.SetActive(false);
         }
+
+        Debug.Log(gameObject.name + " ‚ÌƒGƒ“ƒ`ƒƒƒ“ƒg‚ğ”‚ª‚µ‚½");
     }
 }

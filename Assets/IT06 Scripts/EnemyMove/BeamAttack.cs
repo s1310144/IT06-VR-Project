@@ -22,7 +22,7 @@ public class BeamAttack : MonoBehaviour
 
     public float laserLimitAngle = 80f;
 
-    public float laserAimingHeightY = 0f;
+    public float laserAimingHeightY = 1.7f;
 
 
     public int damage = 5;
@@ -45,7 +45,8 @@ public class BeamAttack : MonoBehaviour
 
     public IEnumerator Attack(Transform player, EnemySound sound)
     {
-        Debug.Log("Beam attack begins / ビーム攻撃開始");
+        //Debug.Log("Beam attack begins / ビーム攻撃開始");
+        Debug.Log(this.gameObject.name + " Beam attack begins / " + this.gameObject.name + " がビーム攻撃開始");
 
         yield return LaserAndBulletAttack(player, sound, 1.0f);
 
@@ -57,7 +58,8 @@ public class BeamAttack : MonoBehaviour
         // 攻撃後の待機時間
         yield return new WaitForSeconds(beamEndWaitTime);
 
-        Debug.Log("Beam attack ends / ビーム攻撃終了");
+        //Debug.Log("Beam attack ends / ビーム攻撃終了");
+        Debug.Log(this.gameObject.name + " Beam attack ends / " + this.gameObject.name + " がビーム攻撃終了");
     }
 
     IEnumerator LaserAndBulletAttack(Transform player, EnemySound sound, float waitTimeRatio)
@@ -73,6 +75,8 @@ public class BeamAttack : MonoBehaviour
 
         float timer = 0f;
 
+        Debug.Log("Laser pointer irradiation begins / レーザーポインター照射開始");
+
         // プレイヤーを追いかけるレーザーポインターwp出す
         while (timer < laserTime * waitTimeRatio)
         {
@@ -85,6 +89,8 @@ public class BeamAttack : MonoBehaviour
 
             yield return null;
         }
+
+        Debug.Log("Laser pointer tracking ends / レーザーポインター追跡終了");
 
         yield return null;
         //yield return new WaitForSeconds(bulletWaitTime * waitTimeRatio);
@@ -103,6 +109,9 @@ public class BeamAttack : MonoBehaviour
 
         Destroy(lasers[0]);
         Destroy(lasers[1]);
+
+        Debug.Log("Laser pointer irradiation begins / レーザーポインター照射終了");
+        Debug.Log("Bullets Fire / 弾丸を発射");
 
         FireBullet(laserStart[0], targetPos, clampedDir[0], sound);
         FireBullet(laserStart[1], targetPos, clampedDir[1], sound);

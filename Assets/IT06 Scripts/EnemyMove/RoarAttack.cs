@@ -29,7 +29,9 @@ public class RoarAttack : MonoBehaviour
 
     public IEnumerator Roar(Transform player, EnemySound sound)
     {
-        Debug.Log("Roar attack begins / ™ôšKUŒ‚ŠJn");
+        //Debug.Log("Roar attack begins / ™ôšKUŒ‚ŠJn");
+        Debug.Log(this.gameObject.name + " Roar attack begins / " + this.gameObject.name + " ‚ª™ôšKUŒ‚ŠJn");
+
         // ƒvƒŒƒCƒ„[•ûŒü‚È‚Ç‚ğŒvZ
         Vector3 dir = (player.position - transform.position).normalized;
         dir.y = 0;
@@ -90,6 +92,7 @@ public class RoarAttack : MonoBehaviour
 
         yield return new WaitForSeconds(roarEndWaitTime);
 
-        Debug.Log("Roar attack ends / ™ôšKUŒ‚I—¹");
+        //Debug.Log("Roar attack ends / ™ôšKUŒ‚I—¹");
+        Debug.Log(this.gameObject.name + " Roar attack ends / " + this.gameObject.name + " ‚ª™ôšKUŒ‚I—¹");
     }
 }
