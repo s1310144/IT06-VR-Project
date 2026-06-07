@@ -2253,6 +2253,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 876667532}
     m_Modifications:
+    - target: {fileID: 2265237577215512765, guid: d0de24c8d06168e4980338ae12a342bf,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2511151695042401596, guid: d0de24c8d06168e4980338ae12a342bf,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2317,6 +2322,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ThrowVelocityScale
       value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6334000716248672779, guid: d0de24c8d06168e4980338ae12a342bf,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6334000716248672779, guid: d0de24c8d06168e4980338ae12a342bf,
+        type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7556471659849811922, guid: d0de24c8d06168e4980338ae12a342bf,
         type: 3}
