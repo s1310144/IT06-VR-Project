@@ -96,7 +96,7 @@ public class EnemyMove : MonoBehaviour
 
     void SearchPlayer()
     {
-        if (foundPlayer) return;
+        if (foundPlayer || !playerInStage) return;
 
         Debug.Log(this.gameObject.name + " searching Player / " + this.gameObject.name + " ‚ªƒvƒŒƒCƒ„[‚ğ’T‚µ‚Ä‚¢‚Ü‚·");
 

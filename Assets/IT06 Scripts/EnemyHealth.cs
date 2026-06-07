@@ -123,10 +123,7 @@ public class EnemyHealth : MonoBehaviour
     // ‰ñ•œ
     public void Heal(int amount)
     {
-        int debugHP = currentHP + amount;
-
-        Debug.Log(this.gameObject.name + " healed " + amount + " HP | " + currentHP + " -> " + debugHP);
-        // Debug.Log(this.gameObject.name + "‚Í " + amount + " HP‰ñ•œ‚µ‚½ | " + currentHP + " -> " + debugHP);
+        int debugHP = currentHP;
 
         currentHP += amount;
 
@@ -134,6 +131,9 @@ public class EnemyHealth : MonoBehaviour
         {
             currentHP = maxHP;
         }
+
+        Debug.Log(this.gameObject.name + " healed " + amount + " HP | " + debugHP + " -> " + currentHP);
+        // Debug.Log(this.gameObject.name + "‚Í " + amount + " HP‰ñ•œ‚µ‚½ | " + debugHP + " -> " + currentHP);
     }
 
     // Ž€–S

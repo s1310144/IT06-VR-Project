@@ -24,9 +24,9 @@ public class EnemyHitDetector : MonoBehaviour
 
         if (weaponDamage != null)
         {
-            if (weaponDamage.damage <= 0) return;
+            if (weaponDamage.GetDamage() <= 0) return;
 
-            enemyHealth.TakeDamage(weaponDamage.damage);
+            enemyHealth.TakeDamage(weaponDamage.GetDamage());
 
             if (hitSound != null)
             {

@@ -5,17 +5,7 @@ public class WeaponEnchant : MonoBehaviour
     public GameObject fireEffect;
     public AudioClip enchantSound;
 
-    private bool isEnchanted = false;
-
-    private WeaponDamage _weaponDamage;
-    private int originalWeaponDamage;
-
-    private void Start()
-    {
-        _weaponDamage = GetComponent<WeaponDamage>();
-        originalWeaponDamage = _weaponDamage.damage;
-        if(isEnchanted) _weaponDamage.damage = 0;
-    }
+    public bool isEnchanted = false;
 
     public void EnchantWeapon()
     {
@@ -25,8 +15,6 @@ public class WeaponEnchant : MonoBehaviour
         }
 
         isEnchanted = true;
-
-        _weaponDamage.damage = originalWeaponDamage;
 
         if (fireEffect != null)
         {
@@ -50,8 +38,6 @@ public class WeaponEnchant : MonoBehaviour
 
         isEnchanted = false;
 
-        _weaponDamage.damage = 0;
-
         if (fireEffect != null)
         {
             fireEffect.SetActive(false);
@@ -59,4 +45,6 @@ public class WeaponEnchant : MonoBehaviour
 
         Debug.Log(gameObject.name + " ‚ÌƒGƒ“ƒ`ƒƒƒ“ƒg‚ğ”‚ª‚µ‚½");
     }
+
+    public bool GetIsEnchanted() { return isEnchanted; }
 }

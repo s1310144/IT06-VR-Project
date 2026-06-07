@@ -9,6 +9,7 @@ TagManager:
   - Terrain
   - Weapon
   - Potion
+  - Holder
   layers:
   - Default
   - TransparentFX
