@@ -190,6 +190,11 @@ PrefabInstance:
       propertyPath: m_Mass
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 7185523014804304493, guid: 34b73c1f94af8864d974ed7f4775e169,
+        type: 3}
+      propertyPath: m_ThrowVelocityScale
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2306,7 +2311,12 @@ PrefabInstance:
     - target: {fileID: 4069517655167466748, guid: d0de24c8d06168e4980338ae12a342bf,
         type: 3}
       propertyPath: m_Mass
-      value: 3
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5328842338208543140, guid: d0de24c8d06168e4980338ae12a342bf,
+        type: 3}
+      propertyPath: m_ThrowVelocityScale
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 7556471659849811922, guid: d0de24c8d06168e4980338ae12a342bf,
         type: 3}
@@ -5068,6 +5078,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8001792231850409706, guid: 3c4b2df512ffb59419142c0860a0a5e0,
         type: 3}
+      propertyPath: m_ThrowOnDetach
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8001792231850409706, guid: 3c4b2df512ffb59419142c0860a0a5e0,
+        type: 3}
+      propertyPath: m_ThrowVelocityScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8001792231850409706, guid: 3c4b2df512ffb59419142c0860a0a5e0,
+        type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ActiveGrab
       objectReference: {fileID: 0}
@@ -5789,6 +5809,21 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6256623149148122877, guid: b5d9548943bc1b543b3664e8c1c24607,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6256623149148122877, guid: b5d9548943bc1b543b3664e8c1c24607,
+        type: 3}
+      propertyPath: MinDistance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6256623149148122877, guid: b5d9548943bc1b543b3664e8c1c24607,
+        type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6482836440208526614, guid: b5d9548943bc1b543b3664e8c1c24607,
         type: 3}
       propertyPath: player
@@ -6442,7 +6477,7 @@ PrefabInstance:
     - target: {fileID: 6598815579406187037, guid: 18ddb545287c546e19cc77dc9fbb2189,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
