@@ -15,9 +15,10 @@ public class EnemyMove : MonoBehaviour
     public float searchRange = 10f;
     public float enemySizeRadius = 1.45f;
 
-    public float floatBaseY = 0.2f;
+    public float floatBaseY = 0.3f;
     public float floatHeight = 0.1f;
     public float floatSwaySpeed = 5.0f;
+    public LayerMask terrainLayer;
 
     public float maxSlopeAngle = 45f;
 
@@ -111,7 +112,7 @@ public class EnemyMove : MonoBehaviour
         RaycastHit hit;
         Vector3 pos = transform.position;
 
-        if (Physics.Raycast(transform.position, Vector3.down, out hit, 10f)) 
+        if (Physics.Raycast(transform.position + Vector3.up * 5f, Vector3.down, out hit, 10f, terrainLayer)) 
         {
             pos = transform.position;
 
@@ -190,12 +191,12 @@ public class EnemyMove : MonoBehaviour
         Vector3 moveDir = (nextPos - transform.position).normalized;
         Vector3 rayOrigin = transform.position + Vector3.up * 0.5f + moveDir * enemySizeRadius;
 
-        if (Physics.Raycast(rayOrigin, moveDir, out hit, 1.0f))
+        if (Physics.Raycast(rayOrigin, moveDir, out hit, 1.0f, terrainLayer))
         {
             if(stopRange < Vector3.Distance(hit.transform.position, transform.position)) return false;
         }
 
-        if (Physics.Raycast(nextPos + moveDir * enemySizeRadius + Vector3.up * 2f, Vector3.down, out hit, 10f))
+        if (Physics.Raycast(nextPos + moveDir * enemySizeRadius + Vector3.up * 2f, Vector3.down, out hit, 10f,terrainLayer))
         {
             float slopeAngle = Vector3.Angle(hit.normal, Vector3.up);
 

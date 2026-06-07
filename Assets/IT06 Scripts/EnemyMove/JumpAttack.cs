@@ -30,7 +30,7 @@ public class JumpAttack : MonoBehaviour
         Vector3 startPos = transform.position;
 
         // ŠëŒ¯ƒGƒŠƒA¶¬
-        GameObject warning = Instantiate(jumpAreaPrefab, targetPos, Quaternion.identity);
+        GameObject warning = Instantiate(jumpAreaPrefab, targetPos + Vector3.up * 0.1f, Quaternion.identity);
         warning.transform.localScale = new Vector3(damageRange * 2, 1, damageRange * 2);
 
         // —\”õ“®ì

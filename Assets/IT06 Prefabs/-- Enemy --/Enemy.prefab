@@ -939,6 +939,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7c7faec7204470041812d12c41484fa0,
         type: 3}
       insertIndex: -1
+      addedObject: {fileID: 6482836440208526614}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7c7faec7204470041812d12c41484fa0,
+        type: 3}
+      insertIndex: -1
       addedObject: {fileID: 859888335940872795}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7c7faec7204470041812d12c41484fa0,
         type: 3}
@@ -1154,7 +1158,7 @@ MonoBehaviour:
   debugKill: 0
   audioSource: {fileID: 6256623149148122877}
   damageClip: {fileID: 8300000, guid: 62f21a88bbba92842b7c71277a79bd85, type: 3}
-  restartManager: {fileID: 0}
+  clearBoard: {fileID: 0}
   useRestartManager: 1
 --- !u!114 &3534683888884968158
 MonoBehaviour:
@@ -1169,6 +1173,41 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitSound: {fileID: 8300000, guid: 651422927c2f05543ae8df9b7e8f89a5, type: 3}
+--- !u!114 &6482836440208526614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1944755975734969343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073e7ea765d129c41a8b19dfb3ca2d71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  moveSpeed: 2
+  randomMoveTimerRange:
+  - 1
+  - 3
+  cooldown: 2
+  stopRange: 2.5
+  searchRange: 20
+  enemySizeRadius: 1.45
+  floatBaseY: 0.3
+  floatHeight: 0.1
+  floatSwaySpeed: 5
+  terrainLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  maxSlopeAngle: 45
+  _enemySound: {fileID: 6916355509140851861}
+  activeMove: 1
+  activeRoar: 1
+  onlySpin: 0
+  onlyJump: 0
+  onlyBeam: 0
+  activeDebugCooldown: 1
 --- !u!114 &859888335940872795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1184,6 +1223,7 @@ MonoBehaviour:
   waitTime: 1.5
   spinSpeed: 720
   spinTime: 2
+  damage: 15
   windupAngle: 60
   windupTime: 0.5
   spinWaitShakeRatio: 0.5

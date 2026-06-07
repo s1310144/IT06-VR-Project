@@ -3423,7 +3423,7 @@ GameObject:
   - component: {fileID: 1021998783}
   - component: {fileID: 1021998785}
   - component: {fileID: 1021998784}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Terrain
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -3650,23 +3650,11 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2000006193}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1063328737 stripped
+--- !u!114 &1063328760 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6916355509140851861, guid: b5d9548943bc1b543b3664e8c1c24607,
+  m_CorrespondingSourceObject: {fileID: 6482836440208526614, guid: b5d9548943bc1b543b3664e8c1c24607,
     type: 3}
   m_PrefabInstance: {fileID: 2000006193}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1063328734}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be2e2b7334b46dc41afcb87392fea68a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1063328748
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1063328734}
   m_Enabled: 1
@@ -3674,26 +3662,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 073e7ea765d129c41a8b19dfb3ca2d71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 2070180713}
-  moveSpeed: 2
-  randomMoveTimerRange:
-  - 1
-  - 3
-  cooldown: 2
-  stopRange: 2.5
-  searchRange: 20
-  enemySizeRadius: 1.45
-  floatBaseY: 0.2
-  floatHeight: 0.1
-  floatSwaySpeed: 5
-  maxSlopeAngle: 45
-  _enemySound: {fileID: 1063328737}
-  activeMove: 1
-  activeRoar: 1
-  onlySpin: 0
-  onlyJump: 0
-  onlyBeam: 0
-  activeDebugCooldown: 1
 --- !u!1 &1088689751
 GameObject:
   m_ObjectHideFlags: 0
@@ -5736,7 +5704,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 1063328748}
+      objectReference: {fileID: 1063328760}
     - target: {fileID: 7518401093273682898, guid: 0c0850554bd874043bf44d91462d4653,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
@@ -6718,6 +6686,31 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6482836440208526614, guid: b5d9548943bc1b543b3664e8c1c24607,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2070180713}
+    - target: {fileID: 6482836440208526614, guid: b5d9548943bc1b543b3664e8c1c24607,
+        type: 3}
+      propertyPath: onlyJump
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6482836440208526614, guid: b5d9548943bc1b543b3664e8c1c24607,
+        type: 3}
+      propertyPath: onlySpin
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6482836440208526614, guid: b5d9548943bc1b543b3664e8c1c24607,
+        type: 3}
+      propertyPath: floatBaseY
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6482836440208526614, guid: b5d9548943bc1b543b3664e8c1c24607,
+        type: 3}
+      propertyPath: searchRange
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 7912034786577462780, guid: b5d9548943bc1b543b3664e8c1c24607,
         type: 3}
       propertyPath: clearBoard
@@ -6747,11 +6740,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1944755975734969343, guid: b5d9548943bc1b543b3664e8c1c24607,
-        type: 3}
-      insertIndex: 6
-      addedObject: {fileID: 1063328748}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5d9548943bc1b543b3664e8c1c24607, type: 3}
 --- !u!1 &2002808828
 GameObject:
