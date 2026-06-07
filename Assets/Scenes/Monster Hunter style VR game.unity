@@ -4800,13 +4800,16 @@ PrefabInstance:
       value: 'You can heal yourself by pressing the trigger button while holding
         a potion.
 
-        You can only attack while holding a weapon and holding
-        down the trigger button.'
+        You can attack while holding a weapon and holding down
+        the trigger button.'
       objectReference: {fileID: 0}
     - target: {fileID: 4015757124078104856, guid: 0c0850554bd874043bf44d91462d4653,
         type: 3}
       propertyPath: tutorialMessages.Array.data[2]
-      value: You can open the pause menu by pressing the A/X button.
+      value: 'You can also attack by throwing your weapon.
+
+        You can open
+        the pause menu by pressing the A/X button.'
       objectReference: {fileID: 0}
     - target: {fileID: 4015757124078104856, guid: 0c0850554bd874043bf44d91462d4653,
         type: 3}
