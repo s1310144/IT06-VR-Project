@@ -5066,6 +5066,11 @@ PrefabInstance:
       propertyPath: throwingDamage
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 8001792231850409706, guid: 3c4b2df512ffb59419142c0860a0a5e0,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ActiveGrab
+      objectReference: {fileID: 0}
     - target: {fileID: 8255702377550825773, guid: 3c4b2df512ffb59419142c0860a0a5e0,
         type: 3}
       propertyPath: m_Name
@@ -6437,7 +6442,7 @@ PrefabInstance:
     - target: {fileID: 6598815579406187037, guid: 18ddb545287c546e19cc77dc9fbb2189,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
