@@ -85,7 +85,7 @@ public class EnemyHealth : MonoBehaviour
     // ƒ_ƒ[ƒW
     public void TakeDamage(int damage)
     {
-        if (isDead) return;
+        if (isDead || damage <= 0) return;
 
         currentHP -= damage;
 
@@ -94,7 +94,7 @@ public class EnemyHealth : MonoBehaviour
             currentHP = 0;
         }
 
-        PlayDamage();
+        //PlayDamage();
 
         StartCoroutine(DamageFlash());
     }

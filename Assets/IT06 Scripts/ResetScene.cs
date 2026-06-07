@@ -8,6 +8,8 @@ public class ResetScene : MonoBehaviour
     // Resetƒ{ƒ^ƒ“‚©‚çŒÄ‚Ño‚·ŠÖ”
     public void Reset()
     {
+        Debug.Log("Reset scene");
+
         // Time.timeScale‚ğ1‚É–ß‚·
         Time.timeScale = 1f;
 

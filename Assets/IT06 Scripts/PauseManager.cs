@@ -7,21 +7,11 @@ public class PauseManager : MonoBehaviour
 {
     [SerializeField] private GameObject pauseBoard;
     [SerializeField] private Transform mainCamera;
-    [SerializeField] private float boardDistance = 1.5f;
-    [SerializeField] private float boardHeightOffset = -0.1f;
-    [SerializeField] private Behaviour[] scriptsToDisable;
+    [SerializeField] private float boardDistance = 5.0f;
+    [SerializeField] private float boardHeightOffset = 1.1f;
     [SerializeField] private Key debugPauseKey;
 
     private bool isPaused = false;
-
-    // ポーズ前に各スクリプトがONだったかを記録する配列
-    private bool[] originalEnabledStates;
-
-    private void Start()
-    {
-        // 登録したスクリプトの数だけ、ON/OFF状態を保存する配列を作る
-        originalEnabledStates = new bool[scriptsToDisable.Length];
-    }
 
     private void Update()
     {
@@ -59,22 +49,6 @@ public class PauseManager : MonoBehaviour
             pauseBoard.SetActive(true);
         }
 
-        // 登録されたスクリプトを停止する
-        for (int i = 0; i < scriptsToDisable.Length; i++)
-        {
-            // 登録欄が空なら飛ばす
-            if (scriptsToDisable[i] == null)
-            {
-                continue;
-            }
-
-            // ポーズ前のON/OFF状態を保存する
-            originalEnabledStates[i] = scriptsToDisable[i].enabled;
-
-            // スクリプトをOFFにする
-            scriptsToDisable[i].enabled = false;
-        }
-
         // Scene内の時間を止める
         Time.timeScale = 0f;
     }
@@ -86,19 +60,6 @@ public class PauseManager : MonoBehaviour
 
         // Scene内の時間を通常に戻す
         Time.timeScale = 1f;
-
-        // 停止させたスクリプトを元の状態に戻す
-        for (int i = 0; i < scriptsToDisable.Length; i++)
-        {
-            // 登録欄が空なら飛ばす
-            if (scriptsToDisable[i] == null)
-            {
-                continue;
-            }
-
-            // ポーズ前にONだったものはON、OFFだったものはOFFに戻す
-            scriptsToDisable[i].enabled = originalEnabledStates[i];
-        }
 
         // PauseBoardを非表示にする
         if (pauseBoard != null)

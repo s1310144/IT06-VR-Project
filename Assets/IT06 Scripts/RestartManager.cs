@@ -12,6 +12,8 @@ public class RestartManager : MonoBehaviour
     // Enable‚É‚È‚Á‚½‚ç“®‚­
     public void OnEnable()
     {
+        Debug.Log("Clear/GameOver Board shown");
+
         // ƒJƒƒ‰‚Ì³–Ê•ûŒü‚ğæ“¾‚·‚é
         Vector3 forward = mainCamera.forward;
 

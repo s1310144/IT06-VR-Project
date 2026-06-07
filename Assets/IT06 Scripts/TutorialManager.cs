@@ -3,27 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class TutorialBoardController : MonoBehaviour
+public class TutorialManager : MonoBehaviour
 {
 
-    [Header("Tutorial Text")]
     [SerializeField] private TMP_Text tutorialText;     // Tutorial_Board内の説明テキスト
 
-    [Header("Tutorial Buttons")]
     [SerializeField] private GameObject backButton;     // 前のページへ戻るボタン
     [SerializeField] private GameObject nextButton;     // 次のページへ進むボタン
     [SerializeField] private GameObject startButton;    // ゲーム開始ボタン
 
-    [Header("Tutorial Pages")]
     [TextArea(3, 8)]
     [SerializeField] private string[] tutorialMessages; // 説明文をページごとに入れる配列
 
     private int pageIndex = 0; // 現在表示しているページ番号
-
-    private void Start()
-    {
-        
-    }
 
     void OnEnable()
     {

@@ -5,14 +5,13 @@ using UnityEngine;
 public class TeleportToArena : MonoBehaviour
 {
     [SerializeField] private Transform xrOrigin;
-
     [SerializeField] private Transform mainCamera;
-
     [SerializeField] private Transform TeleportPoint;
 
     // Startボタンから呼び出す関数
     public void Teleport()
     {
+        Debug.Log("Teleport to arena");
 
         // XR Originをテレポート先へ移動させる
         xrOrigin.position = TeleportPoint.position;
