@@ -41,6 +41,8 @@ public class SpinAttack : MonoBehaviour
 
     public IEnumerator Attack(EnemySound sound)
     {
+        Debug.Log("Spin attack begins / ‰ñ“]UŒ‚ŠJn");
+
         Quaternion startRot = transform.rotation;
 
         // ‹t•ûŒü‚Ö‚Ğ‚Ë‚é‚½‚ß‚ÌŠp“x‚ğ‹‚ß‚é
@@ -107,6 +109,8 @@ public class SpinAttack : MonoBehaviour
 
         // UŒ‚Œã‚Ì‘Ò‹@ŠÔ
         yield return new WaitForSeconds(spinEndWaitTime);
+
+        Debug.Log("Spin attack ends / ‰ñ“]UŒ‚I—¹");
     }
 
     private void OnTriggerEnter(Collider other)

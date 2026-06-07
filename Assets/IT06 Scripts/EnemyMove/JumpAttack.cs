@@ -27,6 +27,8 @@ public class JumpAttack : MonoBehaviour
 
     public IEnumerator Attack(Vector3 targetPos, EnemySound sound)
     {
+        Debug.Log("Jump attack begins / ジャンプ攻撃開始");
+
         Vector3 startPos = transform.position;
 
         // 危険エリア生成
@@ -75,5 +77,7 @@ public class JumpAttack : MonoBehaviour
 
         // 攻撃後の待機時間
         yield return new WaitForSeconds(jumpEndWaitTime);
+
+        Debug.Log("Jump attack ends / ジャンプ攻撃終了");
     }
 }

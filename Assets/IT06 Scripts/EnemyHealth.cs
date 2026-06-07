@@ -87,6 +87,11 @@ public class EnemyHealth : MonoBehaviour
     {
         if (isDead || damage <= 0) return;
 
+        int debugDamage = currentHP - damage;
+
+        Debug.Log(this.gameObject.name + " received " + damage + " damage | " + currentHP + " -> " + debugDamage);
+        // Debug.Log(this.gameObject.name + "は " + damage + " ダメージ受けた | " + currentHP + " -> " + debugDamage);
+
         currentHP -= damage;
 
         if (currentHP < 0)
@@ -94,7 +99,8 @@ public class EnemyHealth : MonoBehaviour
             currentHP = 0;
         }
 
-        //PlayDamage();
+        // ヒット判定スクリプトのほうで音を出すのでコメントアウト
+        // PlayDamage();
 
         StartCoroutine(DamageFlash());
     }
@@ -117,6 +123,11 @@ public class EnemyHealth : MonoBehaviour
     // 回復
     public void Heal(int amount)
     {
+        int debugHP = currentHP + amount;
+
+        Debug.Log(this.gameObject.name + " healed " + amount + " HP | " + currentHP + " -> " + debugHP);
+        // Debug.Log(this.gameObject.name + "は " + amount + " HP回復した | " + currentHP + " -> " + debugHP);
+
         currentHP += amount;
 
         if (currentHP > maxHP)
@@ -131,6 +142,7 @@ public class EnemyHealth : MonoBehaviour
         if (isDead) return;
         isDead = true;
 
+        Debug.Log(this.gameObject.name + " dead / " + this.gameObject.name + "は死んだ");
         StartCoroutine(Death());
     }
 

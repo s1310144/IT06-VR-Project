@@ -11,6 +11,8 @@ public class PlayerHealth : MonoBehaviour
 
     public float redHpRatio = 0.2f;
 
+    private bool isDead = false;
+
     public Volume volume;
 
     public AudioSource audioSource;
@@ -72,6 +74,13 @@ public class PlayerHealth : MonoBehaviour
     // ダメージ
     public void TakeDamage(int damage)
     {
+        if (isDead || damage <= 0) return;
+
+        int debugDamage = currentHP - damage;
+
+        Debug.Log(this.gameObject.name + " received " + damage + " damage | " + currentHP + " -> " + debugDamage);
+        // Debug.Log(this.gameObject.name + "は" + damage + "ダメージ受けた | " + currentHP + " -> " + debugDamage);
+
         currentHP -= damage;
 
         if (currentHP < 0)
@@ -118,6 +127,11 @@ public class PlayerHealth : MonoBehaviour
     // 回復
     public void Heal(int amount)
     {
+        int debugHP = currentHP + amount;
+
+        Debug.Log(this.gameObject.name + " healed " + amount + " HP | " + currentHP + " -> " + debugHP);
+        // Debug.Log(this.gameObject.name + "は " + amount + " HP回復した | " + currentHP + " -> " + debugHP);
+
         currentHP += amount;
 
         if (currentHP > maxHP)
@@ -129,6 +143,11 @@ public class PlayerHealth : MonoBehaviour
     // 死亡
     void Die()
     {
+        Debug.Log(this.gameObject.name + " dead / " + this.gameObject.name + "は死んだ");
+
+        if (isDead) return;
+        isDead = true;
+
         if (gameOverBoard != null)
         {
             enemy.SetActive(false);

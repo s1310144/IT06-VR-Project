@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Roar : MonoBehaviour
+public class RoarAttack : MonoBehaviour
 {
     public float lookPlayerTime = 1f;
     public float FaceUpWaitTime = 0.5f;
@@ -27,8 +27,9 @@ public class Roar : MonoBehaviour
         
     }
 
-    public IEnumerator RoarStart(Transform player, EnemySound sound)
+    public IEnumerator Roar(Transform player, EnemySound sound)
     {
+        Debug.Log("Roar attack begins / ™ôšKUŒ‚ŠJn");
         // ƒvƒŒƒCƒ„[•ûŒü‚È‚Ç‚ğŒvZ
         Vector3 dir = (player.position - transform.position).normalized;
         dir.y = 0;
@@ -58,6 +59,7 @@ public class Roar : MonoBehaviour
 
         timer = 0f;
 
+        // ™ôšK‰¹ŠJn
         sound.PlayRoar();
 
         // Šç‚ğã‚°‚é
@@ -70,7 +72,6 @@ public class Roar : MonoBehaviour
             yield return null;
         }
 
-        // ™ôšK
         yield return new WaitForSeconds(roarTime);
 
         timer = 0f;
@@ -88,5 +89,7 @@ public class Roar : MonoBehaviour
         transform.rotation = lookRot;
 
         yield return new WaitForSeconds(roarEndWaitTime);
+
+        Debug.Log("Roar attack ends / ™ôšKUŒ‚I—¹");
     }
 }

@@ -38,6 +38,8 @@ public class PauseManager : MonoBehaviour
     // Pauseする
     public void PauseGame()
     {
+        Debug.Log("Pause shown");
+
         isPaused = true;
 
         // PauseBoardをプレイヤーの目の前に移動する
@@ -56,6 +58,8 @@ public class PauseManager : MonoBehaviour
     // Pauseを解除する
     public void ResumeGame()
     {
+        Debug.Log("Pause closed");
+
         isPaused = false;
 
         // Scene内の時間を通常に戻す

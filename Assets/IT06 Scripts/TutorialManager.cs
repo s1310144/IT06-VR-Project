@@ -19,6 +19,8 @@ public class TutorialManager : MonoBehaviour
 
     void OnEnable()
     {
+        Debug.Log("Tutorial shown");
+
         pageIndex = 0;
         UpdateTutorialPage();
     }
@@ -28,6 +30,8 @@ public class TutorialManager : MonoBehaviour
         // 最後のページでなければ、次のページへ進む
         if (pageIndex < tutorialMessages.Length - 1)
         {
+            Debug.Log("Next tutorial page");
+
             pageIndex++;
             UpdateTutorialPage();
         }
@@ -38,6 +42,8 @@ public class TutorialManager : MonoBehaviour
         // 1ページ目でなければ、前のページへ戻る
         if (pageIndex > 0)
         {
+            Debug.Log("Back tutorial page");
+
             pageIndex--;
             UpdateTutorialPage();
         }

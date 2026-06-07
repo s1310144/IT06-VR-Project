@@ -22,6 +22,8 @@ public class BeamBullet : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("Beam bullet hits" + other.gameObject.name);
+
         if (other.CompareTag("Player"))
         {
             PlayerHealth hp = other.GetComponent<PlayerHealth>();

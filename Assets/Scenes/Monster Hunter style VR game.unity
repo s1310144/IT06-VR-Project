@@ -2225,17 +2225,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 16269c89128ac37438ffb9b2b2ef587d,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 16269c89128ac37438ffb9b2b2ef587d,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 2
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 16269c89128ac37438ffb9b2b2ef587d,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 2
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 16269c89128ac37438ffb9b2b2ef587d,
         type: 3}
@@ -3026,6 +3026,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 073e7ea765d129c41a8b19dfb3ca2d71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1063328773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1063328734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99c4a7b92ce700d4e80cc12e1b511b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lookPlayerTime: 1
+  FaceUpWaitTime: 0.5
+  roarFaceUpTime: 0.75
+  roarTime: 1
+  roarFaceDownTime: 0.25
+  roarEndWaitTime: 1
+  roarAngle: -30
 --- !u!1 &1088689751
 GameObject:
   m_ObjectHideFlags: 0
@@ -4717,7 +4736,7 @@ PrefabInstance:
     - target: {fileID: 4015757124078104856, guid: 0c0850554bd874043bf44d91462d4653,
         type: 3}
       propertyPath: tutorialMessages.Array.data[2]
-      value: You can open the pause menu by pressing the A/Y button.
+      value: You can open the pause menu by pressing the A/X button.
       objectReference: {fileID: 0}
     - target: {fileID: 4015757124078104856, guid: 0c0850554bd874043bf44d91462d4653,
         type: 3}
@@ -5038,17 +5057,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: c6810517c6addaf469872f75da42eb6d,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c6810517c6addaf469872f75da42eb6d,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 2
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c6810517c6addaf469872f75da42eb6d,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 2
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c6810517c6addaf469872f75da42eb6d,
         type: 3}
@@ -5727,6 +5746,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3281669125215677349, guid: 54427ebbff6885a45a58fe98da6f33c7,
         type: 3}
+    - target: {fileID: 8001565458126694891, guid: b5d9548943bc1b543b3664e8c1c24607,
+        type: 3}
+      propertyPath: laserAimingHeightY
+      value: 1.7
+      objectReference: {fileID: 0}
     - target: {fileID: 8218010669970989761, guid: b5d9548943bc1b543b3664e8c1c24607,
         type: 3}
       propertyPath: player
@@ -5740,7 +5764,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1944755975734969343, guid: b5d9548943bc1b543b3664e8c1c24607,
+        type: 3}
+      insertIndex: 10
+      addedObject: {fileID: 1063328773}
   m_SourcePrefab: {fileID: 100100000, guid: b5d9548943bc1b543b3664e8c1c24607, type: 3}
 --- !u!1 &2002808828
 GameObject:
@@ -6329,7 +6357,7 @@ PrefabInstance:
     - target: {fileID: 6598815579406187037, guid: 18ddb545287c546e19cc77dc9fbb2189,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

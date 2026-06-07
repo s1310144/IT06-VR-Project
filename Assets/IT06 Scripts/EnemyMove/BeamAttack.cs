@@ -22,6 +22,8 @@ public class BeamAttack : MonoBehaviour
 
     public float laserLimitAngle = 80f;
 
+    public float laserAimingHeightY = 0f;
+
 
     public int damage = 5;
 
@@ -43,6 +45,8 @@ public class BeamAttack : MonoBehaviour
 
     public IEnumerator Attack(Transform player, EnemySound sound)
     {
+        Debug.Log("Beam attack begins / ビーム攻撃開始");
+
         yield return LaserAndBulletAttack(player, sound, 1.0f);
 
         for (int i = 0; i < consecutiveAttacksNumber; i++) 
@@ -52,11 +56,13 @@ public class BeamAttack : MonoBehaviour
 
         // 攻撃後の待機時間
         yield return new WaitForSeconds(beamEndWaitTime);
+
+        Debug.Log("Beam attack ends / ビーム攻撃終了");
     }
 
     IEnumerator LaserAndBulletAttack(Transform player, EnemySound sound, float waitTimeRatio)
     {
-        Vector3 targetPos = player.position + Vector3.up * 1.0f;
+        Vector3 targetPos = player.position + Vector3.up * laserAimingHeightY;
 
         GameObject[] lasers = new GameObject[laserStart.Length];
         lasers[0] = Instantiate(laserObjectPrefab);
@@ -72,7 +78,7 @@ public class BeamAttack : MonoBehaviour
         {
             timer += Time.deltaTime;
 
-            targetPos = player.position + Vector3.up * 1.0f;
+            targetPos = player.position + Vector3.up * laserAimingHeightY;
 
             UseLaserPointer(laserStart[0], targetPos, lasers[0]);
             UseLaserPointer(laserStart[1], targetPos, lasers[1]);

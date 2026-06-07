@@ -49,7 +49,7 @@ public class EnemyMove : MonoBehaviour
     JumpAttack _jumpAttack;
     BeamAttack _beamAttack;
 
-    Roar _roar;
+    RoarAttack _roar;
 
     EnemyHealth _enemyHealth;
 
@@ -65,7 +65,7 @@ public class EnemyMove : MonoBehaviour
         _spinAttack = GetComponent<SpinAttack>();
         _jumpAttack = GetComponent<JumpAttack>();
         _beamAttack = GetComponent<BeamAttack>();
-        _roar = GetComponent<Roar>();
+        _roar = GetComponent<RoarAttack>();
         _enemyHealth = GetComponent<EnemyHealth>();
     }
 
@@ -272,7 +272,7 @@ public class EnemyMove : MonoBehaviour
 
         isRoar = true;
 
-        yield return StartCoroutine(_roar.RoarStart(player, _enemySound));
+        yield return StartCoroutine(_roar.Roar(player, _enemySound));
 
         foundPlayer = true;
 
@@ -282,6 +282,7 @@ public class EnemyMove : MonoBehaviour
     // デバッグ用変数が一つでもtrueの時falseを返す
     bool DebugAttack() 
     {
+        Debug.Log("Attack");
         if (onlySpin)
         {
             StartCoroutine(Spin());
